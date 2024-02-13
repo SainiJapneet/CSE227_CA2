@@ -39,7 +39,7 @@ class MyAdapter(var ctx: Context,var list: ArrayList<MyModel>):RecyclerView.Adap
 
         storage = Firebase.storage
         storageReference = storage.reference
-        val imgRef = storageReference.child("/trip/goa.jpg")
+        val imgRef = storageReference.child(data.img)
         imgRef.downloadUrl.addOnSuccessListener { uri ->
             Glide.with(ctx).load(uri).into(holder.imgDestination)
         }

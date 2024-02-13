@@ -24,10 +24,10 @@ class HomeActivity : AppCompatActivity() {
         storageReference = storage.getReference("/trip")
 
         list.add(MyModel("Goa","/trip/goa.jpg","11500"))
-        list.add(MyModel("Himachal","/trip/goa.jpg","5500"))
-        list.add(MyModel("Kashmir","/trip/goa.jpg","6500"))
-        list.add(MyModel("Rajasthan","/trip/goa.jpg","4500"))
-        list.add(MyModel("Mumbai","/trip/goa.jpg","9500"))
+        list.add(MyModel("Himachal","/trip/himachal.jpg","5500"))
+        list.add(MyModel("Kashmir","/trip/kashmir.jpg","6500"))
+        list.add(MyModel("Rajasthan","/trip/rajasthan.jpg","4500"))
+        list.add(MyModel("Mumbai","/trip/mumbai.jpg","9500"))
         var layoutManager = LinearLayoutManager(this)
         rcyView.layoutManager = layoutManager
         val adapter = MyAdapter(this,list)
