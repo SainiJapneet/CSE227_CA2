@@ -1,7 +1,8 @@
 package com.example.tripplanner
 
+import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 
-class MyModel(destination: String, img: BitmapDrawable) {
+class MyModel(var destination: String,var img: Bitmap) {
 
 }
