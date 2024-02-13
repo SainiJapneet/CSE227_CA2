@@ -31,7 +31,7 @@ class SignUp : AppCompatActivity() {
             var pass= edtPassword.text.trim().toString()
             auth?.createUserWithEmailAndPassword(email,pass)?.addOnSuccessListener {
                 Toast.makeText(this,"User Created",Toast.LENGTH_SHORT).show()
-            }.addOnFailureListener {
+            }?.addOnFailureListener {
                 Toast.makeText(this,"Error",Toast.LENGTH_SHORT).show()
             }
         }
