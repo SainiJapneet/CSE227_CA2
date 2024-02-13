@@ -31,6 +31,11 @@ class SignUp : AppCompatActivity() {
             var pass= edtPassword.text.trim().toString()
             auth?.createUserWithEmailAndPassword(email,pass)?.addOnSuccessListener {
                 Toast.makeText(this,"User Created",Toast.LENGTH_SHORT).show()
+                edtEmail.setText("")
+                edtPassword.setText("")
+                val intent = Intent(this,SignIn::class.java)
+                startActivity(intent)
+                finish()
             }?.addOnFailureListener {
                 Toast.makeText(this,"Error",Toast.LENGTH_SHORT).show()
             }

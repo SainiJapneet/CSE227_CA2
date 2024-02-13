@@ -29,6 +29,7 @@ class SignIn : AppCompatActivity() {
             auth?.signInWithEmailAndPassword(email,pass)?.addOnSuccessListener {
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
+                finish()
             }
         }
     }
